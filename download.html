@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>教材下載頁面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-gradient: radial-gradient(circle at top, #e0faff 0, #9dd8ff 35%, #2455ff 80%);
+            --card-bg: rgba(20, 32, 66, 0.94);
+            --accent: #2af598;
+            --text-main: #f7f9ff;
+            --text-muted: #c3cee6;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { font-size: 17px; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 28px 24px 22px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow:
+                0 18px 60px rgba(0, 0, 0, 0.55),
+                0 0 0 1px rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(18px);
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(24, 41, 85, 0.95);
+            border: 1px solid rgba(42, 245, 152, 0.55);
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .tag-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 8px var(--accent);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 1.7rem;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+
+        .download-box {
+            margin-top: 24px;
+            padding: 20px 18px;
+            border-radius: 18px;
+            background: radial-gradient(circle at top, rgba(157, 216, 255, 0.35), rgba(22, 39, 80, 0.98));
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .download-title {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .download-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #050816;
+            background: linear-gradient(90deg, #2af598, #00c3ff);
+            box-shadow:
+                0 0 12px rgba(42, 245, 152, 0.5),
+                0 0 24px rgba(0, 158, 253, 0.45);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.05);
+            box-shadow:
+                0 0 18px rgba(42, 245, 152, 0.7),
+                0 0 32px rgba(0, 158, 253, 0.7);
+        }
+
+        .note {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        .footer {
+            margin-top: 18px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .footer a {
+            color: #9dd8ff;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+        }a
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="tag">
+                <span class="tag-dot"></span>
+                教材下載準備完成
+            </div>
+
+            <h1>感謝填寫！您的教材已準備就緒</h1>
+            <p class="subtitle">
+                您提供的資料已成功送出，以下為本次分享之教材下載位置。
+                如未來有教材更新或相關課程資訊，將優先透過您填寫的 Email 通知。
+            </p>
+
+            <div class="download-box">
+                <div class="download-title">智慧科技導入指引 &amp; 實戰懶人包</div>
+                <div class="download-meta">
+                    兩份教材已放在同一個 Google 雲端硬碟資料夾中，請點擊下方按鈕前往下載。
+                </div>
+
+                <!-- 🔗 這裡使用你提供的資料夾連結 -->
+                <a class="btn-download"
+                   href="https://drive.google.com/drive/folders/1dHBc7k4xUz0KhPvOi2MQlFcwtGudcW1P?usp=drive_link"
+                   target="_blank" rel="noopener">
+                    📥 前往雲端資料夾取得教材
+                </a>
+
+                <div class="note">
+                    若點擊連結後無法開啟，請確認：<br>
+                    1）資料夾的分享權限已設為「知道連結的人皆可檢視」<br>
+                    2）請使用 Chrome / Edge 等現代瀏覽器開啟
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-row">
+                    <span>本教材僅供教學與研究使用，請勿未經授權大量轉載。</span>
+                    <span>如需授權或合作，請聯繫授課教師 王建智 明志科技大學工業工程與管理系 教授。</span>
+                </div>
+                <span>E-mail：ieccwang@mail.mcut.edu.tw</span>
+                <span>
+                    老師個人網站：
+                    <a href="http://ccwang.formosasoft.com/" target="_blank" rel="noopener">
+                        http://ccwang.formosasoft.com/
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -135,12 +135,12 @@
         }
 
         .footer {
-            margin-top: 18px;
-            font-size: 0.75rem;
+            margin-top: 22px;
+            font-size: 0.78rem;
             color: var(--text-muted);
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
         }
 
         .footer a {
@@ -148,18 +148,19 @@
             text-decoration: underline;
         }
 
-        .footer a:hover {
-            color: #ffffff;
-        }a
-
-        .footer-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 8px;
-            flex-wrap: wrap;
+        .footer-unit-box {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.18);
+            background: rgba(255,255,255,0.05);
+            line-height: 1.7;
+            font-size: 0.78rem;
         }
+
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card">
@@ -180,7 +181,6 @@
                     兩份教材已放在同一個 Google 雲端硬碟資料夾中，請點擊下方按鈕前往下載。
                 </div>
 
-                <!-- 🔗 這裡使用你提供的資料夾連結 -->
                 <a class="btn-download"
                    href="https://drive.google.com/drive/folders/1dHBc7k4xUz0KhPvOi2MQlFcwtGudcW1P?usp=drive_link"
                    target="_blank" rel="noopener">
@@ -189,30 +189,38 @@
 
                 <div class="note">
                     若點擊連結後無法開啟，請確認：<br>
-                    1）資料夾的分享權限已設為「知道連結的人皆可檢視」<br>
+                    1）資料夾已設為「知道連結的人皆可檢視」<br>
                     2）請使用 Chrome / Edge 等現代瀏覽器開啟
                 </div>
             </div>
 
+            <!-- 📌 Footer (包含老師、指導單位、執行單位) -->
             <div class="footer">
-                <div class="footer-row">
-                    <span>本教材僅供教學與研究使用，請勿未經授權大量轉載。</span>
-                    <span>如需授權或合作，請聯繫主編老師 王建智 教授 明志科技大學 工業工程與管理系。</span>
+
+                <div>
+                    主編老師：王建智 教授（明志科技大學 工業工程與管理系）<br>
+                    E-mail：
+                    <a href="mailto:ieccwang@mail.mcut.edu.tw">
+                        ieccwang@mail.mcut.edu.tw
+                    </a>
                 </div>
-                <span>E-mail：ieccwang@mail.mcut.edu.tw</span>
-                老師官網：
-                <a href="http://ccwang.formosasoft.com/" target="_blank" style="color:#9dd8ff;text-decoration:underline;">
 
                 <span>
-                    老師個人網站：
-                    <a href="http://ccwang.formosasoft.com/" target="_blank" rel="noopener">
+                    老師官網：
+                    <a href="http://ccwang.formosasoft.com/" target="_blank">
                         http://ccwang.formosasoft.com/
                     </a>
                 </span>
+
+                <!-- 📌 新增官方署名區（漂亮方框） -->
+                <div class="footer-unit-box">
+                    指導單位｜經濟部產業發展署<br>
+                    執行單位｜財團法人資訊工業策進會 專業顧問群
+                </div>
+
             </div>
+
         </div>
     </div>
 </body>
 </html>
-
-

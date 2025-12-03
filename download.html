@@ -135,12 +135,14 @@
         }
 
         .footer {
-            margin-top: 22px;
-            font-size: 0.78rem;
+            margin-top: 24px;
+            font-size: 0.8rem;
             color: var(--text-muted);
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.18);
         }
 
         .footer a {
@@ -148,16 +150,19 @@
             text-decoration: underline;
         }
 
-        .footer-unit-box {
-            margin-top: 12px;
-            padding: 12px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.18);
-            background: rgba(255,255,255,0.05);
-            line-height: 1.7;
-            font-size: 0.78rem;
+        .footer a:hover {
+            color: #ffffff;
         }
 
+        /* 官方署名方框 */
+        .footer-unit-box {
+            margin-top: 6px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(157,216,255,0.35);
+            background: rgba(22, 39, 80, 0.35);
+            line-height: 1.8;
+        }
     </style>
 </head>
 
@@ -176,7 +181,7 @@
             </p>
 
             <div class="download-box">
-                <div class="download-title">智慧科技導入指引 &amp; 實戰懶人包</div>
+                <div class="download-title">智慧科技導入指引 ＆ 實戰懶人包</div>
                 <div class="download-meta">
                     兩份教材已放在同一個 Google 雲端硬碟資料夾中，請點擊下方按鈕前往下載。
                 </div>
@@ -188,21 +193,19 @@
                 </a>
 
                 <div class="note">
-                    若點擊連結後無法開啟，請確認：<br>
-                    1）資料夾已設為「知道連結的人皆可檢視」<br>
-                    2）請使用 Chrome / Edge 等現代瀏覽器開啟
+                    若無法開啟，請確認：<br>
+                    1）資料夾分享權限已設為「知道連結的人可檢視」<br>
+                    2）建議使用 Chrome / Edge 等現代瀏覽器開啟
                 </div>
             </div>
 
-            <!-- 📌 Footer (包含老師、指導單位、執行單位) -->
+            <!-- 📌 Footer -->
             <div class="footer">
 
                 <div>
                     主編老師：王建智 教授（明志科技大學 工業工程與管理系）<br>
                     E-mail：
-                    <a href="mailto:ieccwang@mail.mcut.edu.tw">
-                        ieccwang@mail.mcut.edu.tw
-                    </a>
+                    <a href="mailto:ieccwang@mail.mcut.edu.tw">ieccwang@mail.mcut.edu.tw</a>
                 </div>
 
                 <span>
@@ -212,10 +215,19 @@
                     </a>
                 </span>
 
-                <!-- 📌 新增官方署名區（漂亮方框） -->
+                <!-- 官方署名方框 -->
                 <div class="footer-unit-box">
                     指導單位｜經濟部產業發展署<br>
                     執行單位｜財團法人資訊工業策進會 專業顧問群
+                </div>
+
+                <!-- 智慧財產權聲明 -->
+                <div class="footer-unit-box">
+                    <strong>智慧財產權聲明｜Intellectual Property Notice</strong><br>
+                    本教材內容之著作權，屬原作者與協作團隊所有。<br>
+                    僅限於教學、研究及非商業用途使用。<br>
+                    未經授權，不得重製、散布、公開傳輸、公開展示、改作或作商業利用。<br>
+                    引用或節錄時，請務必註明來源並遵守相關著作權規範。
                 </div>
 
             </div>

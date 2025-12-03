@@ -77,15 +77,6 @@
         h1 { font-size: 1.9rem; margin: 0 0 8px; }
         .subtitle { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; }
 
-        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-        .pill {
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.16);
-            color: var(--text-muted);
-            font-size: 0.78rem;
-        }
-
         .highlight-box {
             background: rgba(30,49,95,0.96);
             border-radius: 12px;
@@ -241,15 +232,16 @@
             to   { opacity: 1; transform: translateY(0); }
         }
                 
-        /* ⭐ 新增：縮小提示字 ⭐ */
+        /* 縮小下方提示文字 */
         .tip-small {
             font-size: 0.7rem;
-            color: ver (--text-muted);
+            color: var(--text-muted);
             margin-top: 4px;
             line-height: 2.0;
-            text-align: justify;       /* ⭐ 左右對齊 ⭐ */
+            text-align: justify;
             text-justify: inter-word; 
         }
+
         /* 右側教材 preview */
         .preview-panel { display: flex; flex-direction: column; gap: 18px; }
 
@@ -273,7 +265,6 @@
 
         .material-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
         .material-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 8px; }
-
         .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
         .chip {
             padding: 4px 8px; font-size: 0.75rem;
@@ -319,13 +310,10 @@
                 </div>
             </div>
 
-            <!-- ⭐Apps Script URL ⭐ -->
+            <!-- ⭐ Apps Script URL ⭐ -->
             <form class="form"
                   action="https://script.google.com/macros/s/AKfycbz48DCBcydz-gA03i7rZfyLY60cgU1sxlayDGpx3hlu_O1qyjKLdEdtkkTLe4S6X6_sLg/exec"
                   method="post">
-
-
-
 
                 <div class="field-group">
                     <label class="field-label">姓名 <span class="required">必填</span></label>
@@ -334,13 +322,14 @@
 
                 <div class="field-group">
                     <label class="field-label">單位 / 系所 <span class="required">必填</span></label>
-                    <input class="input" type="text" name="organization" placeholder="例如：某某公司品保部 / 某某大學 工業工程系" required>
+                    <input class="input" type="text" name="organization"
+                           placeholder="例如：某某公司品保部 / 某某大學 工業工程系" required>
                 </div>
 
                 <div class="field-group">
                     <label class="field-label">Email <span class="required">必填</span></label>
-                    <input class="input" type="email" name="email" placeholder="將作為聯繫與後續教材更新通知" required>
-
+                    <input class="input" type="email" name="email"
+                           placeholder="將作為聯繫與後續教材更新通知" required>
                 </div>
 
                 <div class="field-group">
@@ -379,16 +368,17 @@
                               placeholder="例如：希望了解如何規劃智慧製造導入路徑、或需要可直接套用的實務案例等。"></textarea>
                 </div>
 
-            
                 <div class="field-group">
                     <label class="field-label">您對本教材或課程的提問／建議（開放式）</label>
                     <textarea class="textarea" name="qa"
                               placeholder="可以寫下想請教老師的問題、企業導入情境、或對教材的回饋建議。"></textarea>
-                    <div class="tip-small">您可以寫下目前正在處理的製程問題（例如品質不穩、參數調整困難）、想學的 AI 技術（例如如何選模型、如何解讀模型結果），或希望教材多補充的案例。您的問題愈具體，我們越能針對性地提供協助或更新教材內容。</div> 
+                    <div class="tip-small">
+                        您可以寫下目前正在處理的製程問題（例如品質不穩、參數調整困難）、想學的 AI 技術
+                        （例如如何選模型、如何解讀模型結果），或希望教材多補充的案例。您的問題愈具體，
+                        我們越能針對性地提供協助或更新教材內容。
+                    </div> 
                 </div>            
 
-
-                
                 <div class="agree-row">
                     <label class="checkbox-item">
                         <input type="checkbox" name="agree" required>
@@ -402,6 +392,7 @@
                     </button>
                 </div>
 
+                <!-- 老師資訊＋指導／執行單位 -->
                 <div class="helper-card">
                     <div class="helper-icon">
                         <span>i</span>
@@ -410,28 +401,34 @@
                         填寫完成後，系統將自動導向教材下載頁面。<br>
                         如有問題可透過 Email 與主編老師聯繫。<br>
                         王建智 教授（明志科技大學 工業工程與管理系）<br>
-                        E-mail：<a href="mailto:ieccwang@mail.mcut.edu.tw" style="color:#9dd8ff;">ieccwang@mail.mcut.edu.tw</a><br>     
+                        E-mail：
+                        <a href="mailto:ieccwang@mail.mcut.edu.tw" style="color:#9dd8ff;">
+                            ieccwang@mail.mcut.edu.tw
+                        </a><br>
                         老師官網：
-                        <a href="http://ccwang.formosasoft.com/" target="_blank" style="color:#9dd8ff;text-decoration:underline;">
+                        <a href="http://ccwang.formosasoft.com/" target="_blank"
+                           style="color:#9dd8ff;text-decoration:underline;">
                             http://ccwang.formosasoft.com/
                         </a>
-                 <!-- 這裡是新增的官方署名區（放在老師下面） -->
-                   <div style="
-                       margin-top: 10px;
-                       padding-top: 8px;
-                       border-top: 1px dashed rgba(157,216,255,0.4);
-                       font-size: 0.78rem;
-                       line-height: 1.8;
-                       color: #d0d7e9;
-                   ">
-                       指導單位｜經濟部產業發展署<br>
-                       執行單位｜財團法人資訊工業策進會 專業顧問群
-                   </div>
+
+                        <div style="
+                            margin-top: 10px;
+                            padding-top: 8px;
+                            border-top: 1px dashed rgba(157,216,255,0.4);
+                            font-size: 0.78rem;
+                            line-height: 1.8;
+                            color: #d0d7e9;
+                        ">
+                            指導單位｜經濟部產業發展署<br>
+                            執行單位｜財團法人資訊工業策進會 專業顧問群
+                        </div>
+                    </div>
                 </div>
-            </div> 
 
+            </form>
+        </div>
 
-        <!-- 右側教材預覽 -->
+        <!-- 右側教材預覽（介紹搬到這裡） -->
         <div class="preview-panel">
 
             <!-- 第一份教材（直式封面） -->
@@ -439,7 +436,9 @@
                 <img class="material-cover cover-main" src="cover1.png" alt="智慧科技導入指引封面">
                 <div class="material-title">智慧科技導入指引</div>
                 <div class="material-desc">
-                    解析需求預測、設備維護、品質預測等實務案例，說明如何運用可預測技術優化營運與製程管理，
+                    這份教材整理了企業在導入智慧科技、AI 與數據分析時常見的關鍵問題，
+                    從「盤點需求」到「驗證成效」，一步步拆解實務做法，協助企業少走冤枉路。<br><br>
+                    內容涵蓋需求預測、設備維護、品質預測等多種實務案例，說明如何運用可預測技術優化營運與製程管理，
                     適合作為智慧製造轉型的完整參考手冊。
                 </div>
                 <div class="chip-row">
@@ -472,18 +471,3 @@
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
